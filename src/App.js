@@ -1,30 +1,30 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import logo from './logo.svg';
 import './App.css';
 import { renderIntoDocument } from 'react-dom/test-utils';
 import List from './List';
 
-function App() {
+
+function App(props) {
+  console.log(props);
+  const cardLists = props.store.lists.map(list => {
+    return <List key={list.id} allCards={list.cardIds} header={list.header}></List>
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    //Code here
+    <main>
+      <header>
+        <h1></h1>
       </header>
-    </div>
+      <div className="App-list">
+        {cardLists}
+      </div>
+    </main>
   );
 }
 
-ReactDOM.render(<List></List>,document.getElementById('root'))
+//ReactDOM.render(<App store={STORE} />,document.getElementById('root'))
 
 export default App;
