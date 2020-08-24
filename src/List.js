@@ -1,22 +1,27 @@
 import React from 'react';
+import './List.css';
 import Card from './Card';
 import ReactDOM from 'react-dom';
-//const cards = 
+
 
 function List(props){
     //This is the header and content for the card
-    console.log(props);
+    //console.log(props);
+
+    const cardContent = props.allCardsId.map(Letter => {
+        //console.log('HERE',props);
+    const CurrCard = props.cards[Letter];
+    console.log('THISSS', CurrCard);
+    return <Card key={CurrCard.id} 
+    title={CurrCard.title} 
+    content={CurrCard.content}/>
+    });
+
     return(
         <div className='List'>
             <header>{props.header}</header>
             <div className='List-cards'>
-                {/* {<Card 
-                key='card.id' 
-                title='card.title'
-                content='card.content'>
-                </Card>} */}
-
-                
+                {cardContent}
             </div>
         </div>
     )

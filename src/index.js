@@ -7,7 +7,8 @@ import store from './store';
 
 
 ReactDOM.render(
-    <App store={store}>
+    <App storeLists={store.lists}
+     storeCards={store.allCards}>
 
     </App>,
   document.getElementById('root')

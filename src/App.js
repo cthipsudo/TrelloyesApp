@@ -7,9 +7,12 @@ import List from './List';
 
 
 function App(props) {
-  console.log(props);
-  const cardLists = props.store.lists.map(list => {
-    return <List key={list.id} allCards={list.cardIds} header={list.header}></List>
+  //console.log(props);
+  const cardLists = props.storeLists.map(list => {
+    return <List cards={props.storeCards} 
+    key={list.id} 
+    allCardsId={list.cardIds} 
+    header={list.header}></List>
   });
 
   return (
