@@ -25,6 +25,6 @@ function App() {
   );
 }
 
-ReactDOM.render('<List></List>',document.getElementById(''))
+ReactDOM.render(<List></List>,document.getElementById('root'))
 
 export default App;
