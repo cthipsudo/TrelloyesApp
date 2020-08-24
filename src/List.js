@@ -11,7 +11,7 @@ function List(props){
     const cardContent = props.allCardsId.map(Letter => {
         //console.log('HERE',props);
     const CurrCard = props.cards[Letter];
-    console.log('THISSS', CurrCard);
+    //console.log('THISSS', CurrCard);
     return <Card key={CurrCard.id} 
     title={CurrCard.title} 
     content={CurrCard.content}/>
