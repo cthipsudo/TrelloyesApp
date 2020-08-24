@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { renderIntoDocument } from 'react-dom/test-utils';
+import List from './List';
 
 function App() {
   return (
@@ -22,5 +24,7 @@ function App() {
     </div>
   );
 }
+
+ReactDOM.render('<List></List>',document.getElementById(''))
 
 export default App;
