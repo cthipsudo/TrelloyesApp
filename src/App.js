@@ -17,9 +17,9 @@ function App(props) {
 
   return (
     //Code here
-    <main>
-      <header>
-        <h1></h1>
+    <main className="App">
+      <header className="App-header">
+        <h1>Trelloyes!</h1>
       </header>
       <div className="App-list">
         {cardLists}
